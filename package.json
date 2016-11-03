@@ -1,0 +1,16 @@
+{
+  "name": "z-desktop",
+  "version": "1.0.0",
+  "description": "generate desktop files for linux apps",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Benjamin Caradeuc (http://caradeuc.info)",
+  "license": "MIT",
+  "dependencies": {
+    "clear-screen": "^1.0.0",
+    "figlet": "^1.2.0",
+    "inquirer": "^1.2.2"
+  }
+}
