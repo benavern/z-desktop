@@ -37,10 +37,10 @@ let  questions = [
             if(!input) {
                 return "You must provide a file path to execute."
             }
-            else if(input.charAt(0) === '/') {
+            else if(input.charAt(0) !== '/') {
                 return "You must provide an absolute file path to execute."
             }
-            else if(isValidPath(input)) {
+            else if(!isValidPath(input)) {
                 return "You must provide a valid file path to execute."
             }
             else return true;
@@ -54,10 +54,10 @@ let  questions = [
             if(!input) {
                 return true; // it is optional
             }
-            else if(input.charAt(0) === '/') {
+            else if(input.charAt(0) !== '/') {
                 return "You must provide an absolute icon path."
             }
-            else if(isValidPath(input)) {
+            else if(!isValidPath(input)) {
                 return "You must provide a valid icon path."
             }
             else return true;
