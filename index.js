@@ -127,7 +127,7 @@ inquirer.prompt(questions).then(function (answers) {
     const toWrite = data.join('\n');
     const target =  path.join(HOME, ".local/share/applications", upperCamelCase(answers.Name) + ".desktop");
 
-    write(target, toWrite, function (err, dir) {
+    write(target, toWrite, {fileMode: '0774'}, function (err, dir) {
         if(!err) {
             console.log( "\n"
                 + color.green('The file has been created with success \n -> ') 
